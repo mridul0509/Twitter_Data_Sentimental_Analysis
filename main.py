@@ -19,10 +19,11 @@ class SentimentAnalysis:
 
     def download_data(self):
         # authenticating twitter developer account using consumer key,Access keys and tokens
-        consumer_key = '28Feka9MV9Mv0is0S40R6iK7I'
-        consumer_secret = 'trNbDEitTYfoKz5NVR0Nz1INuA6h7owx7Muho3VpGQNe0zQVX5'
-        access_token = '1388355461628448769-YtHKG0X5a83UZZgyQ9eAKjnAlb7Nbq'
-        access_token_secret = 'yeXymW22i9HloSpfflEV81YWWj602GNZfgabgG4n63ROu'
+        # use your token keys
+        consumer_key = 'xxxxxx'
+        consumer_secret = 'xxxxxx'
+        access_token = 'xxxxxxxxxxxx'
+        access_token_secret = 'xxxxxxxxxx'
         auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
         auth.set_access_token(access_token, access_token_secret)
         api = tweepy.API(auth)
