@@ -20,6 +20,8 @@ class SentimentAnalysis:
     def download_data(self):
         # authenticating twitter developer account using consumer key,Access keys and tokens
         # use your token keys
+        # API keys are your consumer key
+        
         consumer_key = 'xxxxxx'
         consumer_secret = 'xxxxxx'
         access_token = 'xxxxxxxxxxxx'
@@ -34,7 +36,7 @@ class SentimentAnalysis:
         no_of_terms = 20
 
         # searching for tweets
-        self.tweets = tweepy.Cursor(api.search, q=search_term, lang="en").items(no_of_terms)
+        self.tweets = tweepy.Cursor(api.search_tweets, q=search_term, lang="en").items(no_of_terms)
 
         # Open/create a file to write data to
         csv_file = open('tweets.csv', 'w')
